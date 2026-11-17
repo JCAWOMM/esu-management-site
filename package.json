@@ -1,0 +1,22 @@
+{
+  "name": "esu-management-site",
+  "version": "1.0.0",
+  "description": "ESU Management LLC website and client service request portal",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "SEED_DEMO=1 node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.22.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.1"
+  },
+  "engines": {
+    "node": ">=22.5"
+  },
+  "private": true
+}
