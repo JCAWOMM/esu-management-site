@@ -19,8 +19,8 @@ function layout({ title, body, user, csrf, active = '', description = '', bodyCl
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title ? `${title} | ${BIZ.name}` : `${BIZ.name} | Janitorial, Maintenance & Restoration in Brooklyn + NYC`)}</title>
-<meta name="description" content="${esc(description || 'Commercial janitorial, building maintenance, carpet cleaning and floor restoration for property managers in Brooklyn and all five NYC boroughs.')}">
+<title>${esc(title ? `${title} | ${BIZ.name}` : `${BIZ.name} | Janitorial, Maintenance & Restoration in NYC, Atlanta & Orangeburg`)}</title>
+<meta name="description" content="${esc(description || 'Commercial janitorial, building maintenance, carpet cleaning and floor restoration for property managers in Brooklyn and all five NYC boroughs, Atlanta, GA and Orangeburg, SC.')}">
 <link rel="icon" href="/img/logo.png">
 <link rel="stylesheet" href="/styles.css">
 </head>
@@ -46,7 +46,7 @@ function layout({ title, body, user, csrf, active = '', description = '', bodyCl
   <div class="wrap footer-grid">
     <div>
       <a href="/" class="brand brand-light"><img src="/img/logo.png" alt="" width="36" height="36"><span>ESU Management LLC</span></a>
-      <p>Janitorial • Maintenance • Restoration<br>Brooklyn first, serving all five boroughs.</p>
+      <p>Janitorial • Maintenance • Restoration<br>Serving all five NYC boroughs,<br>Atlanta, GA and Orangeburg, SC.</p>
     </div>
     <div>
       <h4>Contact</h4>

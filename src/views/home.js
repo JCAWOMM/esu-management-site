@@ -34,8 +34,8 @@ function home({ sent, error, form = {} } = {}) {
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Brooklyn + all five boroughs</p>
-      <h1>Cleaning, maintenance &amp; restoration for NYC buildings</h1>
+      <p class="eyebrow">New York City · Atlanta, GA · Orangeburg, SC</p>
+      <h1>Cleaning, maintenance &amp; restoration for commercial and residential buildings</h1>
       <p class="lead">Janitorial, building upkeep, carpet and floor restoration for property managers who need the same standard at every site, every visit.</p>
       <div class="cta-row">
         <a href="#quote" class="btn btn-lg">Request a quote</a>
@@ -76,7 +76,7 @@ function home({ sent, error, form = {} } = {}) {
     <div>
       <h2>Why ESU Management</h2>
       <ul class="checks">
-        <li>Brooklyn-first routing for faster response</li>
+        <li>Local crews in New York, Atlanta and Orangeburg for faster response</li>
         <li>Location-based task plans and checklists</li>
         <li>Reliable crews across multiple sites</li>
         <li>Quality control and accountability on every visit</li>
@@ -108,8 +108,8 @@ function home({ sent, error, form = {} } = {}) {
   <div class="wrap coverage">
     <div>
       <h2>Coverage area</h2>
-      <p class="section-lead"><strong>Brooklyn first.</strong> Our primary focus and fastest response.</p>
-      <p>Full-service coverage in Manhattan, Queens, the Bronx and Staten Island. Multi-location accounts are supported.</p>
+      <p class="section-lead">Full-service coverage across New York City, Atlanta, Georgia and Orangeburg, South Carolina.</p>
+      <p>Brooklyn is our home base with the fastest response. Multi-location accounts across states are supported under one portal login.</p>
     </div>
     <ul class="boroughs">
       <li class="primary">Brooklyn <small>Primary focus, fastest response</small></li>
@@ -117,6 +117,8 @@ function home({ sent, error, form = {} } = {}) {
       <li>Queens <small>Full-service coverage</small></li>
       <li>Bronx <small>Full-service coverage</small></li>
       <li>Staten Island <small>Full-service coverage</small></li>
+      <li>Atlanta, GA <small>Full-service coverage</small></li>
+      <li>Orangeburg, SC <small>Full-service coverage</small></li>
     </ul>
   </div>
 </section>
@@ -155,7 +157,7 @@ function home({ sent, error, form = {} } = {}) {
 <section id="quote" class="section alt">
   <div class="wrap quote-grid">
     <div>
-      <h2>Ready for consistent service across your NYC locations?</h2>
+      <h2>Ready for consistent service across all your locations?</h2>
       <p class="section-lead">Tell us about your building and we'll set up a walkthrough. New clients use this form. Existing clients, please use the <a href="/login">client portal</a>.</p>
       ${BIZ.phone ? `<p>Call <a href="tel:${tel(BIZ.phone)}">${esc(BIZ.phone)}</a></p>` : ''}
       ${BIZ.email ? `<p>Email <a href="mailto:${esc(BIZ.email)}">${esc(BIZ.email)}</a></p>` : ''}
@@ -171,7 +173,7 @@ function home({ sent, error, form = {} } = {}) {
         <label>Email *<input type="email" name="email" required maxlength="160" value="${esc(form.email)}" autocomplete="email"></label>
         <label>Phone<input type="tel" name="phone" maxlength="40" value="${esc(form.phone)}" autocomplete="tel"></label>
       </div>
-      <label>Borough
+      <label>Area
         <select name="borough"><option value="">Select…</option>${BOROUGHS.map(b => `<option${sel(form.borough, b)}>${b}</option>`).join('')}</select>
       </label>
       <fieldset class="chips"><legend>Services you need</legend>
