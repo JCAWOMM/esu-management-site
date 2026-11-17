@@ -54,7 +54,7 @@ function adminClient({ client, locations, users, userLocs, csrf, msg, error, tem
   ${tempPassword ? `<div class="flash flash-ok">Temporary password for <strong>${esc(tempPassword.email)}</strong>: <code>${esc(tempPassword.password)}</code><br>Share it with them privately. It is shown only once, and they must change it at first login.</div>` : ''}
 
   <h2>Buildings</h2>
-  <div class="table-wrap"><table class="table"><thead><tr><th>Building</th><th>Address</th><th>Borough</th><th></th></tr></thead><tbody>
+  <div class="table-wrap"><table class="table"><thead><tr><th>Building</th><th>Address</th><th>Area</th><th></th></tr></thead><tbody>
   ${locations.map(l => `<tr><td>${esc(l.name)}</td><td>${esc(l.address)}</td><td>${esc(l.borough)}</td><td>${l.active ? '' : '<span class="muted">inactive</span>'}</td></tr>`).join('') || '<tr><td colspan="4" class="empty">No buildings yet.</td></tr>'}
   </tbody></table></div>
   <form method="post" action="/admin/clients/${client.id}/locations" class="card form">
@@ -62,7 +62,7 @@ function adminClient({ client, locations, users, userLocs, csrf, msg, error, tem
     <div class="row3">
       <label>Name<input name="name" required maxlength="160" placeholder="e.g. 450 Atlantic Ave"></label>
       <label>Address<input name="address" maxlength="240"></label>
-      <label>Borough<select name="borough">${BOROUGHS.map(b => `<option>${b}</option>`).join('')}</select></label>
+      <label>Area<select name="borough">${BOROUGHS.map(b => `<option>${b}</option>`).join('')}</select></label>
     </div>
     <button class="btn btn-sm">Add building</button>
   </form>

@@ -45,7 +45,7 @@ app.post('/quote', (req, res) => {
   run('INSERT INTO quotes (name, company, email, phone, borough, services, message) VALUES (?,?,?,?,?,?,?)',
     form.name, form.company, form.email, form.phone, form.borough, form.services.join(', '), form.message);
   mail.send(mail.OFFICE, `New quote request: ${form.company || form.name}`,
-    `${form.name}${form.company ? ` (${form.company})` : ''}\n${form.email} ${form.phone}\nBorough: ${form.borough}\nServices: ${form.services.join(', ')}\n\n${form.message}\n\n${mail.SITE_URL}/admin/quotes`);
+    `${form.name}${form.company ? ` (${form.company})` : ''}\n${form.email} ${form.phone}\nArea: ${form.borough}\nServices: ${form.services.join(', ')}\n\n${form.message}\n\n${mail.SITE_URL}/admin/quotes`);
   res.redirect('/?sent=1#quote');
 });
 

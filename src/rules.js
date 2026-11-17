@@ -40,6 +40,7 @@ const ROLES = {
   admin: 'ESU staff (admin)',
 };
 
-const BOROUGHS = ['Brooklyn', 'Manhattan', 'Queens', 'Bronx', 'Staten Island', 'Outside NYC'];
+// Service areas, used in the quote form and when adding a building.
+const BOROUGHS = ['Brooklyn, NY', 'Manhattan, NY', 'Queens, NY', 'Bronx, NY', 'Staten Island, NY', 'Atlanta, GA', 'Orangeburg, SC', 'Other'];
 
 module.exports = { CATEGORIES, CATEGORY, PRIORITIES, PRIORITY, STATUSES, WORK_STATUSES, ROLES, BOROUGHS };
